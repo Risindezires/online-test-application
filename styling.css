@@ -1,17 +1,17 @@
 html
 {
 	height: 100%;  /*height deni jaruri hai nahi to pta ni chalega ise kitni height pe gradient lagaana h vaala circle vaala*/
-	background:radial-gradient(circle,#fff,#ccc);
+	background:black;
 }
 #container
 {
 	/*height: 300px;*/
 	width: 550px;
-	background-color: #9DD2EA;
+	background-color: #ffd3b6;
 	margin:  100px auto ;   /*allows container to horizontally center on the page*/
 	   /*top bottom ki margin 100px rahegi lekin left right ki margin auto krne se vo khud b khud hi center mei aa jayega*/
     padding: 20px;
-    box-shadow: 0px 4px 0px 0px #009de4;  
+    box-shadow: 0px 4px 0px 0px black;
 
       /*box-shadow: [right][bottom][blur radius][spread radius][color]*/
       position: relative;
@@ -48,8 +48,8 @@ left: 500px;
 	width: 400px;
 	height: 150px;
 	margin:5px auto 10px auto; /*top right bottom left*/
-	background-color: #9DA0EA;
-	box-shadow: 0px 4px #535aa8;
+	background-color: #476269;
+
 	font-size: 100px; /*when we write something in box (div)*/
 	text-align: center;
 	font-family: cursive;  /*design of text*/
@@ -89,9 +89,9 @@ left: 500px;
 }
 .box:hover,#startreset:hover
 {
-	background-color: #9C89F6;
+	background-color: #f27370;
 	color:white;
-	box-shadow: 0px 4px #6b54d3;
+	box-shadow: 0px 4px black;
 
 }
 .box4
@@ -101,9 +101,9 @@ left: 500px;
 #startreset
 {
 	width: 78px;
-	
+
 	background-color: white;
-	
+
 	margin: 0 auto;
 	padding: 10px;
 	background-color: rgba(255,255,255,0.5);
@@ -111,7 +111,7 @@ left: 500px;
 	cursor: pointer; /*when we hover over boxes a hand will come*/
 	box-shadow: 0px 4px #815348;
 	text-align: center;
-	
+
 
 }
 #timeremaining

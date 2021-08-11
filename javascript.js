@@ -12,11 +12,7 @@
 //generate a new question and ans
 //if we click on ans box
 //if we are playing
-//correct?
-//yes.
-//increase score
-//show correct box for 1 sec
-//generate new Q and A
+//correct
 //if the ans is wrong
 //show try agagin box for 1 second
 var CorrectAnswer;
@@ -43,7 +39,7 @@ document.getElementById("startreset").onclick=function()
         document.getElementById('timeremainingvalue').innerHTML=timeremaining;
         document.getElementById("gameover").style.display="none";
 		//change button to reset
-		document.getElementById("startreset").innerHTML="reset game";
+		document.getElementById("startreset").innerHTML="reset test";
 		//start countdown
 		startcountdown();
 		//generate Q and A
@@ -53,11 +49,11 @@ document.getElementById("startreset").onclick=function()
 
 for(i=1; i<5; i++){
     document.getElementById("box"+i).onclick = function(){
-    //check if we are playing     
+    //check if we are playing
     if(playing == true){//yes
         if(this.innerHTML == CorrectAnswer){
         //correct answer
-            
+
             //increase score by 1
             score++;
             document.getElementById("scorevalue").innerHTML = score;
@@ -65,11 +61,11 @@ for(i=1; i<5; i++){
             document.getElementById("wrong").style.display="none";
             document.getElementById("correct").style.display="block";
             setTimeout(function(){
-                document.getElementById("correct").style.display="none";   
+                document.getElementById("correct").style.display="none";
             }, 1000);
-            
+
             //Generate new Q&A
-            
+
             generateQA();
         }else{
         //wrong answer
@@ -80,7 +76,7 @@ for(i=1; i<5; i++){
             }, 1000);
         }
     }
-}   
+}
 }
 function startcountdown()//startcounter
 {
@@ -91,13 +87,13 @@ function startcountdown()//startcounter
    	if(timeremaining==0)
    	{
    		stopcountdown();
-   		document.getElementById("gameover").style.display="block";   
-   		document.getElementById("gameover").innerHTML="<p>gameover!</p><p>your score is " + score + ". </p>"
+   		document.getElementById("gameover").style.display="block";
+   		document.getElementById("gameover").innerHTML="<p>Test completed!</p><p>your  test score is " + score + ". </p>"
    	  document.getElementById("correct").style.display="none";
    	  document.getElementById("wrong").style.display="none";
    	document.getElementById("timeremaining").style.display="none";
    	playing=false;
-   	document.getElementById("startreset").innerHTML="start game";
+   	document.getElementById("startreset").innerHTML="start test";
   }
    },1000)
 }//stop counter
@@ -107,7 +103,7 @@ function stopcountdown()
 }
 function generateQA()
 {
-	var x=1+Math.round(9*Math.random());   
+	var x=1+Math.round(9*Math.random());
 	var y=1+Math.round(9*Math.random());
 	CorrectAnswer=x*y;
 	document.getElementById("question").innerHTML=x+"x"+y;
@@ -127,4 +123,3 @@ function generateQA()
     	}
     }
 }
-
